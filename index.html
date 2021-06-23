@@ -1,0 +1,341 @@
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>This is my paper title</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="TEDS-Net: Enforcing Diffeomorphisms in Spatial Transformers to Guarantee Topology Preservation in Segmentations" />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">TEDS-Net: Enforcing Diffeomorphisms in Spatial Transformers to Guarantee Topology Preservation in Segmentations</span>
+		<br>
+		<br>
+		<center><font size="+2"><i>MICCAI 2021</i></font></center>
+		<br>
+		<table align=center width=600px>
+			<table align=center width=600px>
+				<tr>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=58_isAMAAAAJ&hl=en">Madeleine K. Wyburd</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://nkdinsdale.github.io/nkdinsdale/">Nicola Dinsdale</a><sup>2</sup></span>
+						</center>
+					</td>
+
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://users.ox.ac.uk/~some2959/people.html">Ana I.L. Namburete</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://users.fmrib.ox.ac.uk/~mark/">Mark Jenkinson</a><sup>2,3,4</sup></span>
+						</center>
+					</td>					
+				</tr>
+			</table>
+
+			<br>
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=800px>
+						<center>
+							<span style="font-size:18px"><sup>1</sup>Ultrasound NeuroImage Analysis Group, University of Oxford</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=800px>
+						<center>
+							<span style="font-size:18px"><sup>2</sup>Wellcome Centre for Integrative Neuroimaging, FMRIB,University of Oxford</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=800px>
+						<center>
+							<span style="font-size:18px"><sup>3</sup>Australian Institute for Machine Learning (AIML), Department of Computer Science, University of Adelaide</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=800px>
+				<tr>
+					<td align=center width=800px>
+						<center>
+							<span style="font-size:18px"><sup>4</sup>South Australian Health and Medical Research Institute (SAHMRI)</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<br>
+
+
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/mwyburd/TEDS-Net'>[GitHub]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	
+	<br>
+	<hr>
+	<table align=center width=1000px>
+		<tr>
+			<td width=1000px>
+        		<center>
+        			<img class="round" style="width:800px" src="./resources/bulkshifts.png"/>
+        		</center>
+        	</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+			<center>
+				Accurate topology is key when performing meaningful anatomical segmentations, however, it is often overlooked in traditional deep learning methods. In this work we propose TEDS-Net: a novel segmentation method that guarantees accurate topology. Our method is built upon a continuous diffeomorphic framework, which enforces topology preservation. However, in practice, diffeomorphic fields are represented using a finite number of parameters and sampled using methods such as linear interpolation, violating the theoretical guarantees. We therefore introduce additional modifications to more strictly enforce it. Our network learns how to warp a binary prior, with the desired topological characteristics, to complete the segmentation task. We tested our method on myocardium segmentation from an open-source 2D heart dataset. TEDS-Net preserved topology in 100% of the cases, compared to 90% from the U-Net, without sacrificing on Hausdorff Distance or Dice performance. 
+			</center>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<table align=center width=1000px>
+		<center><h1>Pipeline</h1></center>
+		<tr>
+			<td width=1000px>
+        		<center>
+        			<img class="round" style="width:800px" src="./resources/TEDS.png"/>
+        		</center>
+        	</td>
+		</tr>
+	</table>
+	<tr>
+    	<td>
+			<center>
+				<font size="-0.5">Schematic of TEDS-Net architecture. A CNN learns two initial fields, <b>u</b>, at different resolutions, from an input image <b>X</b>. 
+					The fields are enforced to be diffeomorphic using an activation function amplified through composition layers  and "super" upsampled to 2x the resolution of the input.
+					The bulk displacement samples a binary prior, <b>P</b>, generating <b>Y</b><sub>Bulk</sub>, which is then sampled by the fine tuning field <b>&Phi;</b><sub>FT</sub>. The asterisks show the elements removed during ablation studies.</font>
+    		</center>
+		</td>
+    </tr>
+
+
+
+	<br>
+	<hr>
+	<table align=center width=1000px>
+		<center><h1>Qualitative Results</h1></center>
+		<tr>
+			<td width=1000px>
+        		<center>
+        			<img class="round" style="width:800px" src="./resources/myo2.png"/>
+        		</center>
+        	</td>
+		</tr>
+	</table>
+	<tr>
+    	<td>
+			<center>
+				<font size="-0.5">Examples of myocardium manual annotations <font color="green">(green)</font>, compared to U-Net and TEDS-Net segmentations <font color="pink">(pink)</font> from the ACDC dataset</font>
+    		</center>
+		</td>
+    </tr>
+
+	<br>
+	<hr>
+	<table align=center width=1000px>
+		<center><h1>Parameter Searching</h1></center>
+		<tr>
+			<td width=1000px>
+        		<center>
+        			<img class="round" style="width:800px" src="./resources/IntLayer_R.png"/>
+        		</center>
+        	</td>
+		</tr>
+	</table>
+
+	<tr>
+    	<td>
+			<center>
+				<font size="-0.5">The effect that the number of integration layers <font color="red">(a)</font> and the radius of the binary prior <font color="red">(b)</font> had on segmentation performance and the diffeomorphic nature of the generated fields. Due to the image dimensions, 50 was the maximum radius used.</font>
+    		</center>
+		</td>
+    </tr>
+
+	<hr>
+	<br>
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					MW and ND is supported by the Engineering and Physical Sciences Research Council (EPSRC) and Medical Research Council (MRC) [grant number EP/L016052/1]. MJ is supported by the National Institute for Health Research (NIHR) Oxford Biomedical Research Centre (BRC), and this research was funded by the Well- come Trust [215573/Z/19/Z]. The Wellcome Centre for Integrative Neuroimaging is supported by core funding from the Wellcome Trust [203139/Z/16/Z]. AN is grateful for support from the UK Royal Academy of Engineering under the Engineering for Development Research Fellowships scheme.
+					<br>
+					<br>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+
